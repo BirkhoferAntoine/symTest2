@@ -4,6 +4,11 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    # environment dev/prod
+    env: '%env(APP_ENV)%'
+    # github Oauth parameters
+    github.client_id: '%env(CLIENT_ID)%'
+    github.client_secret: '%env(CLIENT_SECRET)%'
 
 services:
     # default configuration for services in *this* file

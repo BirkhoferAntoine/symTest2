@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Post!{% endblock %}
+
+{% block body %}
+
+    <div class="card mb-3 text-center">
+        <article>
+            <h2>{{ article.title }}</h2>
+            <div class="metadata">Ecrit le {{ article.date | date('d/m/Y') }} à {{ article.date | date('H:i')}} dans la categorie</div>
+            <div class="content">
+                <img src="{{ article.image }}" alt="">
+                {{ article.content | raw }}
+            </div>
+        </article>
+    </div>
+
+{% endblock %}
